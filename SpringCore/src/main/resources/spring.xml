@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.learningspringcore.Student" scope="prototype">
+        <property name="name" value="Ali"></property>
+    </bean>
+    <bean id="employee" class="com.learningspringcore.Employee"></bean>
+    <bean id="school" class="com.learningspringcore.School">
+        <property name="student" ref="student"></property>
+        <constructor-arg value="DPS"></constructor-arg>
+    </bean>
+</beans>
